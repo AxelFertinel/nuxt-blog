@@ -25,5 +25,4 @@ import type { Post } from "~/types/posts";
 const posts = await $fetch<Post[]>(
     "https://jsonplaceholder.typicode.com/posts?_limit=20"
 );
-console.log("⚖ posts:", posts);
 </script>

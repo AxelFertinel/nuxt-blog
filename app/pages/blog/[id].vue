@@ -34,9 +34,6 @@ const post = await $fetch<Post>(
 const comments = await $fetch<Comments[]>(
     `https://jsonplaceholder.typicode.com/posts/${id}/comments`
 );
-
-console.log("🇬🇼 comments:", comments);
-//https://jsonplaceholder.typicode.com/posts/1
 </script>
 
 <style lang="scss" scoped></style>
