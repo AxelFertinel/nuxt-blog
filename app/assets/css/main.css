@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+    @apply text-3xl;
+}
+h2 {
+    @apply text-xl;
+}
+h3 {
+    @apply text-lg font-bold;
+}
+.container {
+    @apply max-w-7xl mx-auto mt-2 px-2;
+}
+
+.btn {
+    @apply text-white rounded-md px-2 py-1 cursor-pointer shadow-md;
+}
+
+.card {
+    @apply shadow hover:shadow-xl rounded p-4 flex flex-col justify-between;
+}
+
+.post_grid {
+    @apply grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-6;
+}
+nav {
+    @apply shadow-lg;
+}
+.menu {
+    @apply flex gap-2 p-2 max-w-7xl m-auto;
+}
+.menu li a {
+    @apply bg-gray-400 p-2 text-white rounded hover:bg-gray-600;
+}
+
+.menu li a.router-link-active {
+    @apply bg-orange-400;
+}
