@@ -9,7 +9,7 @@ Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduct
 </p>
 <ul>
     <li>J'utilise Jsonplaceholder pour les fakes posts/comments</li>
-    <li>Création d'un layout defautl et custom pour les posts</li>
+    <li>Création d'un layout default et custom pour les posts</li>
     <li>Création de composant réutilisable pour post/comment</li>
     <li>Style basique avec tailwind CSS</li>
     <li>Route dynamic avec blog/[id]</li>
