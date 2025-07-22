@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h1>Accueil de mon blog</h1>
+        <h1>Accueil de mon blog test</h1>
         <p class="bold mb-2">
             Ce projet à pour but de m'entrainer à manipuler Nuxt.Js
         </p>
