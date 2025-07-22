@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div v-if="pending" class="loading">
-            <p>Chargement de l'article...</p>
+            <p>Chargement de l'article.....</p>
         </div>
 
         <div v-else-if="error" class="error">
