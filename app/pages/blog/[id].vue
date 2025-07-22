@@ -16,6 +16,7 @@
                 </div>
             </div>
             <div class="lg:grid lg:gap-4">
+                <h2>Articles recommandé</h2>
                 <Post v-for="post in posts" :key="post.id" :post="post" />
             </div>
         </div>
