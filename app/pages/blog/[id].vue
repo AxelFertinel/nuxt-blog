@@ -5,17 +5,11 @@
         <div class="mt-4">
             <h2>Commentaires</h2>
             <div class="post_grid">
-                <div v-for="comment in comments" :key="comment.id" class="card">
-                    <h3>
-                        {{ comment.name }}
-                    </h3>
-                    <p>
-                        {{ comment.email }}
-                    </p>
-                    <p>
-                        {{ comment.body }}
-                    </p>
-                </div>
+                <Comment
+                    v-for="comment in comments"
+                    :key="comment.id"
+                    :comment="comment"
+                />
             </div>
         </div>
     </div>
@@ -24,7 +18,9 @@
 <script setup lang="ts">
 import type { Comments } from "~/types/comments";
 import type { Post } from "~/types/posts";
-
+definePageMeta({
+    layout: "custom",
+});
 const route = useRoute();
 const id = route.params.id;
 const post = await $fetch<Post>(
@@ -32,7 +28,7 @@ const post = await $fetch<Post>(
 );
 
 const comments = await $fetch<Comments[]>(
-    `https://jsonplaceholder.typicode.com/posts/${id}/comments`
+    `https://jsonplaceholder.typicode.com/posts/${id}/comments?_limit=4`
 );
 </script>
 
