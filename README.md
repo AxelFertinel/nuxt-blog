@@ -6,19 +6,33 @@ Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduct
 
 Make sure to install dependencies:
 
+ <p class="bold mb-2">
+    Ce projet à pour but de m'entrainer à manipuler Nuxt.Js
+</p>
+<ul class="list-disc pl-4">
+    <li>J'utilise Jsonplaceholder pour les fakes posts/comments</li>
+    <li>Création d'un layout defautl et custom pour les posts</li>
+    <li>Création de composant réutilisable pour post/comment</li>
+    <li>Style basique avec tailwind CSS</li>
+    <li>Route dynamic avec blog/[id]</li>
+</ul>
 ```bash
 # npm
 npm install
 
 # pnpm
+
 pnpm install
 
 # yarn
+
 yarn install
 
 # bun
+
 bun install
-```
+
+````
 
 ## Development Server
 
@@ -36,7 +50,7 @@ yarn dev
 
 # bun
 bun run dev
-```
+````
 
 ## Production
 
