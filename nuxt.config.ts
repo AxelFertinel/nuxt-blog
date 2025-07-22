@@ -7,14 +7,9 @@ export default defineNuxtConfig({
     experimental: {
         defaults: {
             nuxtLink: {
-                // default values
                 componentName: "NuxtLink",
                 externalRelAttribute: "noopener noreferrer",
                 activeClass: "router-link-active",
-
-                prefetchedClass: undefined, // can be any valid string class name
-                trailingSlash: undefined,
-                prefetchOn: { visibility: true },
             },
         },
     },
