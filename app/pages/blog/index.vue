@@ -9,7 +9,9 @@
 
 <script setup lang="ts">
 import type { Post } from "~/types/posts";
-
+useHead({
+    title: "Blog",
+});
 const posts = await $fetch<Post[]>(
     "https://jsonplaceholder.typicode.com/posts?_limit=20"
 );
