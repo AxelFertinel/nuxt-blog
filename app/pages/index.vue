@@ -43,8 +43,6 @@
 <script setup>
 import { userStore } from "~/store/user";
 
-
-
 const store = userStore();
 const nom = ref("");
 const prenom = ref("");
