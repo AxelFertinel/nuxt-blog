@@ -10,6 +10,13 @@
             <li>Création de composant réutilisable pour post/comment</li>
             <li>Style basique avec tailwind CSS</li>
             <li>Route dynamic avec blog/[id]</li>
+            <li>Utilisation de Pinia pour le cache</li>
+            <li>
+                Publier sur Vercel :
+                <a target="_blank" href="https://nuxt-blog-pearl.vercel.app/"
+                    >https://nuxt-blog-pearl.vercel.app/</a
+                >
+            </li>
         </ul>
         <form action="" class="shadow p-2 rounded w-64 mt-2">
             <div>

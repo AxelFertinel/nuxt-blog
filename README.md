@@ -13,6 +13,13 @@ Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduct
     <li>Création de composant réutilisable pour post/comment</li>
     <li>Style basique avec tailwind CSS</li>
     <li>Route dynamic avec blog/[id]</li>
+    <li>Utilisation de Pinia pour le cache</li>
+    <li>
+        Publier sur Vercel :
+        <a target="_blank" href="https://nuxt-blog-pearl.vercel.app/"
+            >https://nuxt-blog-pearl.vercel.app/</a
+        >
+    </li>
 </ul>
 
 ## Setup
