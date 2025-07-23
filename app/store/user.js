@@ -14,4 +14,3 @@ export const userStore = defineStore(
         persist: true,
     }
 );
-
