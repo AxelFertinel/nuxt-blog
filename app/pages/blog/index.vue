@@ -2,17 +2,18 @@
     <div class="container">
         <h1>Blog</h1>
 
-        <div v-if="pending" class="loading">
+        <div v-if="postStore.pending" class="loading">
             <p>Chargement des articles...</p>
         </div>
 
-        <div v-else-if="error" class="error">
+        <div v-else-if="postStore.error" class="error">
             <h2>Oups ! Une erreur est survenue</h2>
-            <p>Impossible de charger les articles</p>
+            <p>{{ postStore.error.message }}</p>
+            <button @click="retryLoading" class="retry-btn">Réessayer</button>
         </div>
 
-        <div v-else-if="posts && posts.length > 0" class="post_grid">
-            <Post v-for="post in posts" :key="post.id" :post="post" />
+        <div v-else-if="postStore.hasPosts" class="post_grid">
+            <Post v-for="post in postStore.posts" :key="post.id" :post="post" />
         </div>
 
         <div v-else class="no-posts">
@@ -22,15 +23,31 @@
 </template>
 
 <script setup lang="ts">
-import type { Post } from "~/types/posts";
+import { usePostStore } from "~/store/post";
 
-useHead({
-    title: "Blog",
+const postStore = usePostStore();
+
+// Charger les posts au montage du composant
+onMounted(async () => {
+    // Ne charger que si pas déjà en cache
+    if (!postStore.hasPosts) {
+        await postStore.fetchPosts();
+    }
 });
 
-const {
-    data: posts,
-    pending,
-    error,
-} = useFetch<Post[]>("https://jsonplaceholder.typicode.com/posts?_limit=20");
+// Fonction pour réessayer en cas d'erreur
+const retryLoading = async () => {
+    await postStore.fetchPosts();
+};
+
+// SEO
+useHead({
+    title: "Blog",
+    meta: [
+        {
+            name: "description",
+            content: `Découvrez nos ${postStore.postsCount} articles de blog`,
+        },
+    ],
+});
 </script>
