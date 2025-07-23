@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h1>Accueil de mon blog</h1>
+        <h1>Accueil de mon blog test 2</h1>
         <p class="bold mb-2">
             Ce projet à pour but de m'entrainer à manipuler Nuxt.Js
         </p>
@@ -42,8 +42,6 @@
 </template>
 <script setup>
 import { userStore } from "~/store/user";
-
-
 
 const store = userStore();
 const nom = ref("");
